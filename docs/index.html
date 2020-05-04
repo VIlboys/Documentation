@@ -7,28 +7,92 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css"> -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
+ <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
 </head>
 <body>
-  <nav>
-    <a href="#/">主页</a>
-    <a href="#/home1">连接</a>
-    <a href="#/bar/a">连接1</a>
-  </nav>
   <div id="app"></div>
   
   <script>
     window.$docsify = {
-      name: '',
-      repo: '',
       coverpage: true,
       loadSidebar :true,
-      subMaxLevel: 9
+      subMaxLevel: 9,
+      coverpage: true,
+      repo: 'docsifyjs/docsify',
+      maxLevel: 3,
+      subMaxLevel: 3,
+      // 侧边栏现实的网站名称。
+      name: '<a class="app-name-link" data-nosearch="" href="yunhao.icu">LYQ-BAI</a>',
+      // 禁用标签符号解析
+      noEmoji: true,
+      // 在较小的屏幕上，导航栏将与边栏合并。
+      mergeNavbar: true,
+      // 加载404页面的自定义路径
+      notFoundPage: 'my404.md',
+      // 全文搜索
+      search: 'auto', // default
+
+      search : [
+        '/',            // => /README.md
+        '/guide',       // => /guide.md
+        '/get-started', // => /get-started.md
+        '/zh-cn/',      // => /zh-cn/README.md
+      ],
+       // complete configuration parameters
+      search: {
+        maxAge: 86400000, // Expiration time, the default one day
+        paths: [], // or 'auto'
+        placeholder: '探索新事物',
+
+        // Localization
+        placeholder: {
+          '/zh-cn/': '搜素一下',
+          '/': '探索新事物'
+        },
+
+        noData: 'No Results!',
+
+        // Localization
+        noData: {
+          '/zh-cn/': '找不到结果',
+          '/': 'No Results'
+        },
+
+        // Headline depth, 1 - 6
+        depth: 2,
+
+        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+
+        // To avoid search index collision
+        // between multiple websites under the same domain
+        namespace: 'website-1',
+
+        mergeNavbar: true,
+        // 路由器模式
+        routerMode: 'history'
+      }
     }
   </script>
+  <!-- <script src="//unpkg.com/docsify"></script> -->
+  <!-- <script src="//unpkg.com/prismjs/components/prism-java.js"></script> -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script> -->
+  
+  
+ 
+  
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
+  
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!--  -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 高亮java代码块 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+  <!-- 复制到剪贴板 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+
+ 
+
   
 </body>
 </html>
